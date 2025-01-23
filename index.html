@@ -29,6 +29,33 @@
     </style>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blikající text</title>
+    <style>
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .blinking-text {
+            font-size: 40px;
+            font-weight: bold;
+            animation: blink 1s infinite;
+            color: red; /* Změňte barvu podle potřeby */
+        }
+    </style>
+</head>
+<body>
+    <div class="blinking-text">
+        Toto je blikající text!
+    </div>
+</body>
+</html>
     <h1>Vítejte na mé webové stránce!</h1>
     <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
     <footer>
