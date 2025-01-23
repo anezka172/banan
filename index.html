@@ -3,63 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Moje Webová Stránka</title>
+    <title>Blikající pozadí</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        p {
-            font-size: 18px;
-        }
-        footer {
-            position: fixed;
-            bottom: 10px;
-            width: 100%;
-            text-align: center;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blikající text</title>
-    <style>
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
+        @keyframes blinkBackground {
+            0% { background-color: red; }
+            25% { background-color: blue; }
+            50% { background-color: green; }
+            75% { background-color: yellow; }
+            100% { background-color: pink; }
         }
 
-        .blinking-text {
-            font-size: 40px;
-            font-weight: bold;
-            animation: blink 1s infinite;
-            color: red; /* Změňte barvu podle potřeby */
+        body {
+            margin: 0;
+            height: 100vh;
+            animation: blinkBackground 3s infinite; /* Doba trvání animace a opakování */
         }
     </style>
 </head>
 <body>
-    <div class="blinking-text">
-        Toto je blikající text!
-    </div>
-</body>
-</html>
-    <h1>Vítejte na mé webové stránce!</h1>
-    <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
-    <footer>
-        <p>© 2025 Moje Webová Stránka</p>
-    </footer>
 </body>
 </html>
