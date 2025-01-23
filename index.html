@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webová stránka s měnící se barvou</title>
+    <title>Webová stránka s měnící se barvou a obrázkem</title>
     <style>
         body {
             margin: 0;
@@ -13,12 +13,16 @@
             align-items: center;
             font-family: Arial, sans-serif;
             transition: background-color 1s; /* Plynulý přechod barvy */
+            background-image: url('tvuj-obrazek.jpg'); /* Cesta k obrázku */
+            background-size: cover; /* Obrázek pokryje celé pozadí */
+            background-position: center;
         }
 
         .center-text {
             font-size: 50px;
             font-weight: bold;
             color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Stín textu pro lepší čitelnost */
         }
     </style>
 </head>
