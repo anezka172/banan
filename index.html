@@ -3,23 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blikající pozadí</title>
+    <title>Webová stránka s měnící se barvou</title>
     <style>
-        @keyframes blinkBackground {
-            0% { background-color: red; }
-            25% { background-color: blue; }
-            50% { background-color: green; }
-            75% { background-color: yellow; }
-            100% { background-color: pink; }
-        }
-
         body {
             margin: 0;
             height: 100vh;
-            animation: blinkBackground 3s infinite; /* Doba trvání animace a opakování */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            transition: background-color 1s; /* Plynulý přechod barvy */
+        }
+
+        .center-text {
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
         }
     </style>
 </head>
 <body>
+    <div class="center-text">Ahoj</div>
+
+    <script>
+        // Funkce pro změnu barvy pozadí
+        function changeBackgroundColor() {
+            const colors = ['red', 'blue', 'green', 'yellow', 'pink', 'purple'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        // Automaticky změní barvu pozadí každých 3 sekundy
+        setInterval(changeBackgroundColor, 3000);
+
+        // Alternativně můžete změnit barvu pozadí kliknutím do konzole příkazového řádku
+        console.log("Zadejte: changeBackgroundColor() do konzole pro změnu barvy.");
+    </script>
 </body>
 </html>
