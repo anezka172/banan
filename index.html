@@ -3,45 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webová stránka s měnící se barvou a obrázkem</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moje Webová Stránka</title>
     <style>
         body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             font-family: Arial, sans-serif;
-            transition: background-color 1s; /* Plynulý přechod barvy */
-            background-image: url('https://innovacion.uas.edu.mx/wp-content/uploads/2023/03/chatgpt_assistente.jpg'); /* Cesta k obrázku */
-            background-size: cover; /* Obrázek pokryje celé pozadí */
-            background-position: center;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
         }
-
-        .center-text {
-            font-size: 50px;
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Stín textu pro lepší čitelnost */
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+        }
+        footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="center-text">Ahoj</div>
-
-    <script>
-        // Funkce pro změnu barvy pozadí
-        function changeBackgroundColor() {
-            const colors = ['red', 'blue', 'green', 'yellow', 'pink', 'purple'];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            document.body.style.backgroundColor = randomColor;
-        }
-
-        // Automaticky změní barvu pozadí každých 3 sekundy
-        setInterval(changeBackgroundColor, 3000);
-
-        // Alternativně můžete změnit barvu pozadí kliknutím do konzole příkazového řádku
-        console.log("Zadejte: changeBackgroundColor() do konzole pro změnu barvy.");
-    </script>
+    <h1>Vítejte na mé webové stránce!</h1>
+    <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
+    <footer>
+        <p>© 2025 Moje Webová Stránka</p>
+    </footer>
 </body>
 </html>
