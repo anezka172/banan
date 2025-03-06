@@ -1,1 +1,78 @@
-c
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moje Webová Stránka</title>
+    <style>
+        #scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Skrytí tlačítka na začátku */
+    cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #45a049;
+}
+
+        nav ul li a.active {
+    color: #ff9800; /* Změní barvu odkazu, když je aktivní */
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+        }
+        footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Získání tlačítka
+        var mybutton = document.getElementById("scrollToTopBtn");
+    
+        // Když uživatel scrolluje dolů 20px od vrchu stránky, zobrazí tlačítko
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+    
+        // Když uživatel klikne na tlačítko, přejde na vrchol stránky
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
+    <h1>Vítejte na mé webové stránce!</h1>
+    <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
+    <footer>
+        <p>© 2025 Moje Webová Stránka</p>
+    </footer>
+</body>
+</html>
