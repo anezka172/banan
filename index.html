@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    img {
+        width: 200px;
+        height: 150px;
+        margin-top: 20px;
+        border-radius: 10px; /* Zaoblení rohů */
+        border: 3px solid #4CAF50; /* Přidání zeleného rámečku */
+    }
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Moje Webová Stránka</title>
     <style>
+        nav ul li a.active {
+    color: #ff9800; /* Změní barvu odkazu, když je aktivní */
+}
+
         #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
@@ -69,10 +82,41 @@
         }
     </script>
     
-    <h1>Vítejte na mé webové stránce!</h1>
+    <h1>Film Fan</h1>
     <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
     <footer>
         <p>© 2025 Moje Webová Stránka</p>
     </footer>
 </body>
 </html>
+<nav>
+    <ul>
+        <li><a href="index.html" class="active">Domů</a></li>
+        <li><a href="about.html">O nás</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+</nav>
+<footer>
+    <p>&copy; 2025 FilmFan. Všechna práva vyhrazena.</p>
+    <p>Webová stránka vytvořena pomocí HTML a CSS.</p>
+</footer>
+<button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">↑</button>
+<script>
+    // Získání tlačítka
+    var mybutton = document.getElementById("scrollToTopBtn");
+
+    // Když uživatel scrolluje dolů 20px od vrchu stránky, zobrazí tlačítko
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    };
+
+    // Když uživatel klikne na tlačítko, přejde na vrchol stránky
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
