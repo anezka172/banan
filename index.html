@@ -1,57 +1,79 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    img {
-        width: 200px;
-        height: 150px;
-        margin-top: 20px;
-        border-radius: 10px; /* Zaoblení rohů */
-        border: 3px solid #4CAF50; /* Přidání zeleného rámečku */
-    }
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Moje Webová Stránka</title>
+
+    <!-- Google Font: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        nav ul li a.active {
-    color: #ff9800; /* Změní barvu odkazu, když je aktivní */
-}
-
-        #scrollToTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    display: none; /* Skrytí tlačítka na začátku */
-    cursor: pointer;
-}
-
-#scrollToTopBtn:hover {
-    background-color: #45a049;
-}
-
-        nav ul li a.active {
-    color: #ff9800; /* Změní barvu odkazu, když je aktivní */
-}
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif; /* Použití fontu Roboto */
             background-color: #f0f8ff;
             color: #333;
             text-align: center;
             padding: 50px;
+            margin: 0; /* Zajišťuje, že nebude žádný okraj kolem stránky */
         }
+
         h1 {
             color: #4CAF50;
         }
+
         p {
             font-size: 18px;
         }
+
+        /* Obrázek */
+        img {
+            width: 200px;
+            height: 150px;
+            margin-top: 20px;
+            border-radius: 10px; /* Zaoblení rohů */
+            border: 3px solid #4CAF50; /* Přidání zeleného rámečku */
+        }
+
+        /* Navigace */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Aktivní třída pro navigaci */
+        nav ul li a.active {
+            color: #ff9800; /* Změní barvu odkazu, když je aktivní */
+        }
+
+        /* Zápatí */
         footer {
             position: fixed;
             bottom: 10px;
@@ -59,13 +81,56 @@
             text-align: center;
             font-size: 14px;
         }
+
+        /* Scroll to top button */
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            display: none; /* Skrytí tlačítka na začátku */
+            cursor: pointer;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Navigace -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Domů</a></li>
+            <li><a href="about.html">O nás</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hlavní obsah -->
+    <h1>Film Fan</h1>
+    <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
+    <img src="https://th.bing.com/th/id/R.02822faddf5a2e4aaf44eefa439561f7?rik=gvP%2bfh6oD1MPRQ&pid=ImgRaw&r=0" alt="Animované pohádky">
+    
+    <!-- Zápatí -->
+    <footer>
+        <p>&copy; 2025 FilmFan. Všechna práva vyhrazena.</p>
+        <p>Webová stránka vytvořena pomocí HTML a CSS.</p>
+    </footer>
+
+    <!-- Tlačítko pro návrat na vrchol -->
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <!-- JavaScript pro scroll-to-top -->
     <script>
         // Získání tlačítka
         var mybutton = document.getElementById("scrollToTopBtn");
-    
+
         // Když uživatel scrolluje dolů 20px od vrchu stránky, zobrazí tlačítko
         window.onscroll = function() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -74,7 +139,7 @@
                 mybutton.style.display = "none";
             }
         };
-    
+
         // Když uživatel klikne na tlačítko, přejde na vrchol stránky
         function topFunction() {
             document.body.scrollTop = 0;
@@ -82,41 +147,5 @@
         }
     </script>
     
-    <h1>Film Fan</h1>
-    <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
-    <footer>
-        <p>© 2025 Moje Webová Stránka</p>
-    </footer>
 </body>
 </html>
-<nav>
-    <ul>
-        <li><a href="index.html" class="active">Domů</a></li>
-        <li><a href="about.html">O nás</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-    </ul>
-</nav>
-<footer>
-    <p>&copy; 2025 FilmFan. Všechna práva vyhrazena.</p>
-    <p>Webová stránka vytvořena pomocí HTML a CSS.</p>
-</footer>
-<button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">↑</button>
-<script>
-    // Získání tlačítka
-    var mybutton = document.getElementById("scrollToTopBtn");
-
-    // Když uživatel scrolluje dolů 20px od vrchu stránky, zobrazí tlačítko
-    window.onscroll = function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-    };
-
-    // Když uživatel klikne na tlačítko, přejde na vrchol stránky
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-</script>
