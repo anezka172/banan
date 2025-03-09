@@ -19,7 +19,7 @@
             display: flex;
             flex-direction: column;
             background-color: #f0f8ff;
-            color: #333;
+            color: #fff; /* Bílé písmo pro lepší kontrast na pozadí */
         }
 
         /* Hlavní obsah */
@@ -33,8 +33,9 @@
         }
 
         h1 {
-            color: #4CAF50;
+            color: #fff;
             margin-bottom: 20px;
+            font-size: 3em; /* Zvýšení velikosti nadpisu */
         }
 
         p {
@@ -42,18 +43,17 @@
             margin-bottom: 20px;
         }
 
-        /* Obrázek */
+        /* Obrázky */
         img {
-            width: 200px;
-            height: 150px;
-            margin-top: 20px;
-            border-radius: 10px;
-            border: 3px solid #4CAF50;
+            width: 100vw; /* Obrázky zabírají celou šířku obrazovky */
+            height: 100vh; /* Obrázky zabírají celou výšku obrazovky */
+            object-fit: cover; /* Obrázky se přizpůsobí, ale nezmění svůj poměr stran */
+            margin-bottom: 10px; /* Mezera mezi obrázky */
         }
 
         /* Navigace */
         nav {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7); /* Mírně průhledné pozadí pro navigaci */
             padding: 10px;
             position: fixed;
             top: 0;
@@ -83,14 +83,9 @@
             color: #4CAF50;
         }
 
-        /* Aktivní třída pro navigaci */
-        nav ul li a.active {
-            color: #ff9800;
-        }
-
         /* Zápatí */
         footer {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7); /* Mírně průhledné pozadí pro zápatí */
             color: white;
             padding: 10px;
             position: relative;
@@ -132,12 +127,11 @@
     <main>
         <h1>Film Fan</h1>
         <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
+
+        <!-- Obrázky, které pokrývají celou stránku -->
         <img src="https://th.bing.com/th/id/R.02822faddf5a2e4aaf44eefa439561f7?rik=gvP%2bfh6oD1MPRQ&pid=ImgRaw&r=0" alt="Animované pohádky">
-        
-        <div>
-            <img src="https://image.pmgstatic.com/cache/resized/w1989/files/images/film/photos/166/748/166748859_efd3b3.jpg" alt="Film obrázek">
-            <img src="https://nafilmu.cz/wp-content/uploads/2023/11/Trailer-na-V-hlave-2-696x464.webp" alt="Film obrázek">
-        </div>
+        <img src="https://image.pmgstatic.com/cache/resized/w1989/files/images/film/photos/166/748/166748859_efd3b3.jpg" alt="Film obrázek">
+        <img src="https://nafilmu.cz/wp-content/uploads/2023/11/Trailer-na-V-hlave-2-696x464.webp" alt="Film obrázek">
     </main>
 
     <!-- Zápatí -->
