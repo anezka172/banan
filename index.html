@@ -26,20 +26,19 @@
         main {
             flex: 1;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
             text-align: center;
             height: 100%;
             padding: 20px;
+            margin-top: 10%; /* Zvětšení vzdálenosti nadpisu od vrchu stránky */
         }
 
         h1 {
-            color: #4CAF50; /* Změněná barva nadpisu na zelenou */
-            font-size: 2.5em; /* Normální, ale výrazný nadpis */
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
+            color: #4CAF50; /* Zelená barva nadpisu */
+            font-size: 3em; /* Zvýšení velikosti nadpisu */
+            margin-bottom: 40px; /* Větší mezera pod nadpisem */
         }
 
         p {
@@ -52,6 +51,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
+            gap: 20px; /* Mezera mezi obrázky */
         }
 
         .images img {
@@ -168,12 +168,4 @@
             }
         };
 
-        // Když uživatel klikne na tlačítko, přejde na vrchol stránky
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-
-</body>
-</html>
+        // Když uživatel klikne na tlačítko, přejd
