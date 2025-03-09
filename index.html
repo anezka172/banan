@@ -10,21 +10,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+        /* Obecné nastavení pro tělo stránky */
         body {
             font-family: 'Roboto', sans-serif; /* Použití fontu Roboto */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Zajistí, že stránka zabere celou výšku obrazovky */
+            display: flex;
+            flex-direction: column;
             background-color: #f0f8ff;
             color: #333;
+        }
+
+        /* Hlavní obsah */
+        main {
+            flex: 1; /* Zajistí, že hlavní obsah zabere zbývající místo */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 50px;
-            margin: 0; /* Zajišťuje, že nebude žádný okraj kolem stránky */
         }
 
         h1 {
             color: #4CAF50;
+            margin-bottom: 20px;
         }
 
         p {
             font-size: 18px;
+            margin-bottom: 20px;
         }
 
         /* Obrázek */
@@ -32,8 +47,8 @@
             width: 200px;
             height: 150px;
             margin-top: 20px;
-            border-radius: 10px; /* Zaoblení rohů */
-            border: 3px solid #4CAF50; /* Přidání zeleného rámečku */
+            border-radius: 10px;
+            border: 3px solid #4CAF50;
         }
 
         /* Navigace */
@@ -70,19 +85,20 @@
 
         /* Aktivní třída pro navigaci */
         nav ul li a.active {
-            color: #ff9800; /* Změní barvu odkazu, když je aktivní */
+            color: #ff9800;
         }
 
         /* Zápatí */
         footer {
-            position: fixed;
-            bottom: 10px;
-            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: relative;
             text-align: center;
             font-size: 14px;
         }
 
-        /* Scroll to top button */
+        /* Tlačítko pro návrat na vrchol */
         #scrollToTopBtn {
             position: fixed;
             bottom: 20px;
@@ -92,7 +108,7 @@
             border: none;
             padding: 10px;
             border-radius: 5px;
-            display: none; /* Skrytí tlačítka na začátku */
+            display: none;
             cursor: pointer;
         }
 
@@ -113,10 +129,17 @@
     </nav>
 
     <!-- Hlavní obsah -->
-    <h1>Film Fan</h1>
-    <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
-    <img src="https://th.bing.com/th/id/R.02822faddf5a2e4aaf44eefa439561f7?rik=gvP%2bfh6oD1MPRQ&pid=ImgRaw&r=0" alt="Animované pohádky">
-    
+    <main>
+        <h1>Film Fan</h1>
+        <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
+        <img src="https://th.bing.com/th/id/R.02822faddf5a2e4aaf44eefa439561f7?rik=gvP%2bfh6oD1MPRQ&pid=ImgRaw&r=0" alt="Animované pohádky">
+        
+        <div>
+            <img src="https://image.pmgstatic.com/cache/resized/w1989/files/images/film/photos/166/748/166748859_efd3b3.jpg" alt="Film obrázek">
+            <img src="https://nafilmu.cz/wp-content/uploads/2023/11/Trailer-na-V-hlave-2-696x464.webp" alt="Film obrázek">
+        </div>
+    </main>
+
     <!-- Zápatí -->
     <footer>
         <p>&copy; 2025 FilmFan. Všechna práva vyhrazena.</p>
@@ -146,8 +169,6 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
-    
+
 </body>
 </html>
-<img src="https://image.pmgstatic.com/cache/resized/w1989/files/images/film/photos/166/748/166748859_efd3b3.jpg" alt="Film obrázek">
-    <img src="https://nafilmu.cz/wp-content/uploads/2023/11/Trailer-na-V-hlave-2-696x464.webp" alt="Film obrázek">
