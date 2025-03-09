@@ -11,6 +11,9 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            height: 100vh; /* Zajistí, že stránka zabere celou výšku obrazovky */
+            display: flex;
+            flex-direction: column;
         }
 
         header {
@@ -37,7 +40,12 @@
         }
 
         main {
+            flex: 1; /* Zajistí, že hlavní obsah zabere zbývající místo */
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         footer {
@@ -45,9 +53,7 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            position: relative;
         }
 
         /* Reakce na mobilní zařízení */
@@ -56,6 +62,14 @@
                 display: block;
                 margin-bottom: 10px;
             }
+        }
+
+        /* Obrázek */
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -73,10 +87,10 @@
     <main>
         <h2>Jak nás kontaktovat?</h2>
         <p>Máte-li jakékoli dotazy, neváhejte nás kontaktovat na emailu: <strong>info@filmy.cz</strong></p>
+        <img src="https://lh5.googleusercontent.com/proxy/iYQrCCsDQMnO4jpAALILjXfPd5C6AutpaOEQf-Iz7CzyKDxhZ39Fj3BYXMMIIz7L-wQupwJNJl6dIM4hs9RUesdE7LtZfbtyqwfOZxc=s0-d" alt="Film obrázek">
     </main>
     <footer>
         <p>&copy; 2025 Tvá stránka. Všechna práva vyhrazena.</p>
     </footer>
 </body>
-</head>
-<img src="https://lh5.googleusercontent.com/proxy/iYQrCCsDQMnO4jpAALILjXfPd5C6AutpaOEQf-Iz7CzyKDxhZ39Fj3BYXMMIIz7L-wQupwJNJl6dIM4hs9RUesdE7LtZfbtyqwfOZxc=s0-d" alt="Film obrázek">
+</html>
