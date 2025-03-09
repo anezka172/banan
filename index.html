@@ -19,7 +19,7 @@
             display: flex;
             flex-direction: column;
             background-color: #f0f8ff;
-            color: #fff;
+            color: #333;
         }
 
         /* Hlavní obsah */
@@ -32,12 +32,12 @@
             text-align: center;
             height: 100%;
             padding: 20px;
-            margin-top: 10%; /* Zvětšení vzdálenosti nadpisu od vrchu stránky */
         }
 
         h1 {
             color: #4CAF50; /* Zelená barva nadpisu */
             font-size: 3em; /* Zvýšení velikosti nadpisu */
+            margin-top: 50px; /* Větší mezera nad nadpisem */
             margin-bottom: 40px; /* Větší mezera pod nadpisem */
         }
 
@@ -46,7 +46,7 @@
             margin-bottom: 20px;
         }
 
-        /* Obrázky */
+        /* Obrázky - uspořádání tří obrázků */
         .images {
             display: flex;
             justify-content: space-between;
@@ -168,4 +168,13 @@
             }
         };
 
-        // Když uživatel klikne na tlačítko, přejd
+        // Když uživatel klikne na tlačítko, přejde na vrchol stránky
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>
+
