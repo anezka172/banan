@@ -12,30 +12,34 @@
     <style>
         /* Obecné nastavení pro tělo stránky */
         body {
-            font-family: 'Roboto', sans-serif; /* Použití fontu Roboto */
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            height: 100vh; /* Zajistí, že stránka zabere celou výšku obrazovky */
+            height: 100vh;
             display: flex;
             flex-direction: column;
             background-color: #f0f8ff;
-            color: #fff; /* Bílé písmo pro lepší kontrast na pozadí */
+            color: #fff;
         }
 
         /* Hlavní obsah */
         main {
-            flex: 1; /* Zajistí, že hlavní obsah zabere zbývající místo */
+            flex: 1;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
             text-align: center;
+            height: 100%;
+            padding: 20px;
         }
 
         h1 {
             color: #fff;
-            margin-bottom: 20px;
-            font-size: 3em; /* Zvýšení velikosti nadpisu */
+            font-size: 2.5em; /* Normální, ale výrazný nadpis */
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         p {
@@ -44,11 +48,17 @@
         }
 
         /* Obrázky */
-        img {
-            width: 100vw; /* Obrázky zabírají celou šířku obrazovky */
-            height: 100vh; /* Obrázky zabírají celou výšku obrazovky */
-            object-fit: cover; /* Obrázky se přizpůsobí, ale nezmění svůj poměr stran */
-            margin-bottom: 10px; /* Mezera mezi obrázky */
+        .images {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .images img {
+            width: 30%; /* Každý obrázek zabírá 30% šířky */
+            height: 300px; /* Pevná výška pro obrázky */
+            object-fit: cover; /* Zachová poměr stran a pokryje požadovanou oblast */
+            border-radius: 10px; /* Zaoblení rohů */
         }
 
         /* Navigace */
@@ -62,107 +72,4 @@
         }
 
         nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav ul li a:hover {
-            color: #4CAF50;
-        }
-
-        /* Zápatí */
-        footer {
-            background-color: rgba(0, 0, 0, 0.7); /* Mírně průhledné pozadí pro zápatí */
-            color: white;
-            padding: 10px;
-            position: relative;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        /* Tlačítko pro návrat na vrchol */
-        #scrollToTopBtn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            display: none;
-            cursor: pointer;
-        }
-
-        #scrollToTopBtn:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navigace -->
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Domů</a></li>
-            <li><a href="about.html">O nás</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hlavní obsah -->
-    <main>
-        <h1>Film Fan</h1>
-        <p>Toto je ukázková stránka hostovaná na GitHub Pages.</p>
-
-        <!-- Obrázky, které pokrývají celou stránku -->
-        <img src="https://th.bing.com/th/id/R.02822faddf5a2e4aaf44eefa439561f7?rik=gvP%2bfh6oD1MPRQ&pid=ImgRaw&r=0" alt="Animované pohádky">
-        <img src="https://image.pmgstatic.com/cache/resized/w1989/files/images/film/photos/166/748/166748859_efd3b3.jpg" alt="Film obrázek">
-        <img src="https://nafilmu.cz/wp-content/uploads/2023/11/Trailer-na-V-hlave-2-696x464.webp" alt="Film obrázek">
-    </main>
-
-    <!-- Zápatí -->
-    <footer>
-        <p>&copy; 2025 FilmFan. Všechna práva vyhrazena.</p>
-        <p>Webová stránka vytvořena pomocí HTML a CSS.</p>
-    </footer>
-
-    <!-- Tlačítko pro návrat na vrchol -->
-    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">↑</button>
-
-    <!-- JavaScript pro scroll-to-top -->
-    <script>
-        // Získání tlačítka
-        var mybutton = document.getElementById("scrollToTopBtn");
-
-        // Když uživatel scrolluje dolů 20px od vrchu stránky, zobrazí tlačítko
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        };
-
-        // Když uživatel klikne na tlačítko, přejde na vrchol stránky
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-
-</body>
-</html>
+            list
