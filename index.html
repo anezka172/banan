@@ -22,45 +22,6 @@
             color: #333;
         }
 
-        /* Hlavní obsah */
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100%;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #4CAF50; /* Zelená barva nadpisu */
-            font-size: 3em; /* Zvýšení velikosti nadpisu */
-            margin-top: 50px; /* Větší mezera nad nadpisem */
-            margin-bottom: 40px; /* Větší mezera pod nadpisem */
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        /* Obrázky - uspořádání tří obrázků */
-        .images {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            gap: 20px; /* Mezera mezi obrázky */
-        }
-
-        .images img {
-            width: 30%; /* Každý obrázek zabírá 30% šířky */
-            height: 300px; /* Pevná výška pro obrázky */
-            object-fit: cover; /* Zachová poměr stran a pokryje požadovanou oblast */
-            border-radius: 10px; /* Zaoblení rohů */
-        }
-
         /* Navigace */
         nav {
             background-color: rgba(0, 0, 0, 0.7); /* Mírně průhledné pozadí pro navigaci */
@@ -91,6 +52,45 @@
 
         nav ul li a:hover {
             color: #4CAF50;
+        }
+
+        /* Hlavní obsah */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Začátek textu ihned pod hlavičkou */
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px 20px 20px; /* Padding pro horní část stránky, aby text nezačínal přímo pod navigací */
+            height: 100%; /* Zajištění, že stránka zaplní celý prostor */
+        }
+
+        h1 {
+            color: #4CAF50; /* Zelená barva nadpisu */
+            font-size: 3em; /* Zvýšení velikosti nadpisu */
+            margin-top: 0; /* Úprava, aby nadpis byl hned pod hlavičkou */
+            margin-bottom: 40px; /* Větší mezera pod nadpisem */
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Obrázky - uspořádání tří obrázků */
+        .images {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 20px; /* Mezera mezi obrázky */
+        }
+
+        .images img {
+            width: 30%; /* Každý obrázek zabírá 30% šířky */
+            height: 300px; /* Pevná výška pro obrázky */
+            object-fit: cover; /* Zachová poměr stran a pokryje požadovanou oblast */
+            border-radius: 10px; /* Zaoblení rohů */
         }
 
         /* Zápatí */
@@ -177,4 +177,3 @@
 
 </body>
 </html>
-
