@@ -50,3 +50,126 @@ footer {
         margin-bottom: 10px;
     }
 }
+/* Základní styl pro celé tělo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Aby stránka vyplnila celou výšku */
+}
+
+/* Styl pro hlavičku a navigaci */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Hlavní obsah */
+main {
+    padding-top: 70px; /* Zajistí, že obsah nezačne pod navigací */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Sekce s obrázkem a textem */
+.content {
+    display: flex;
+    width: 100%;
+    height: 100%; /* Zajistí, že sekce vyplní celou stránku */
+}
+
+/* Obrázková část - obrázek na pravé straně */
+.image {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end; /* Umístí obrázek na pravou stranu */
+}
+
+.image img {
+    width: 100%; /* Obrázek vyplní celou šířku svého kontejneru */
+    height: auto;
+    border-radius: 10px;
+    max-height: 80vh; /* Zajistí, že obrázek nebude příliš vysoký */
+}
+
+/* Textová část - text na levé straně */
+.text {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%; /* Zajišťuje, že text nebude zabírat celou šířku */
+}
+
+h2 {
+    color: #4CAF50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Styl pro zápatí */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Reakce na mobilní zařízení */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text {
+        max-width: 100%;
+    }
+
+    .image img {
+        width: 80%;
+    }
+}
