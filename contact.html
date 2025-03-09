@@ -47,13 +47,14 @@
             height: calc(100vh - 140px); /* Zajištění, že hlavní obsah zabere celý prostor mezi header a footer */
             justify-content: space-between; /* Rozdělení na dvě části */
             padding: 20px;
-            align-items: center; /* Vertikálně centrováno */
+            align-items: flex-start; /* Text začne od shora */
         }
 
         /* Styly pro textovou část */
         .text {
             flex: 1;
             padding-right: 20px;
+            margin-top: 0; /* Ujistíme se, že text je hned pod hlavičkou */
         }
 
         .text h2 {
@@ -71,12 +72,13 @@
             flex: 1;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .image img {
-            max-width: 100%;
+            width: 100%; /* Obrázek zabere maximální šířku, ale ne přehnaně */
             height: auto;
+            max-width: 600px; /* Maximální šířka obrázku (aby nepřesahoval text) */
             border-radius: 8px;
         }
 
@@ -127,22 +129,4 @@
             <h2>Jak nás kontaktovat?</h2>
             <p>Máte-li jakékoli dotazy, neváhejte nás kontaktovat na emailu: <strong>info@filmy.cz</strong></p>
 
-            <p>Rádi bychom se dozvěděli, jak můžeme zlepšit naše služby. Pokud máte nějaký návrh, připomínku nebo otázku týkající se našich produktů, kontaktujte nás. Naším cílem je poskytovat vám ty nejlepší filmové zážitky a služby. Pokud se chcete dozvědět více o nadcházejících filmech, novinkách v oblasti kina nebo o našich speciálních akcích, přihlaste se k odběru našeho newsletteru.</p>
-
-            <p>Chápeme, jak důležité je mít rychlý a efektivní přístup k informacím, a proto se snažíme odpovědět na všechny vaše dotazy co nejrychleji. Naši odborníci jsou k dispozici každý den od 9:00 do 18:00 a rádi vám pomohou s jakýmikoli otázkami týkajícími se našich filmů, předprodeje vstupenek nebo doporučení na základě vašich preferencí.</p>
-
-            <p>Pro více informací o našich produktech a službách nás můžete také sledovat na sociálních médiích, kde pravidelně sdílíme novinky, recenze a různé tipy na filmy. Těšíme se na vaše dotazy a připomínky!</p>
-        </div>
-
-        <!-- Obrázková část vpravo -->
-        <div class="image">
-            <img src="https://lh5.googleusercontent.com/proxy/iYQrCCsDQMnO4jpAALILjXfPd5C6AutpaOEQf-Iz7CzyKDxhZ39Fj3BYXMMIIz7L-wQupwJNJl6dIM4hs9RUesdE7LtZfbtyqwfOZxc=s0-d" alt="Film obrázek">
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Tvá stránka. Všechna práva vyhrazena.</p>
-    </footer>
-
-</body>
-</html>
+            <p>Rádi bychom se dozvěděli, jak můžeme zlepšit naše služby. Pokud máte nějaký návrh, připomínku nebo otázku týkající se našich produktů, kontaktujte nás. Naším cílem je poskytovat vám ty nejlepší filmové zážitky a slu
