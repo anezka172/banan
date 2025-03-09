@@ -52,6 +52,7 @@ footer {
 }
 /* Základní styl pro celé tělo */
 /* Základní styl pro celé tělo */
+/* Základní styl pro celé tělo */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -109,7 +110,7 @@ main {
 /* Sekce s obrázkem a textem */
 .content {
     display: flex;
-    flex-direction: row; /* Obrazek vpravo, text vlevo */
+    flex-direction: row; /* Obrázek vpravo, text vlevo */
     width: 100%;
     align-items: center;
 }
@@ -144,8 +145,9 @@ p {
 }
 
 .image img {
-    width: 60%; /* Obrázek bude menší */
-    height: auto;
+    width: 80%; /* Obrázek bude menší */
+    height: auto; /* Udržuje přirozený poměr stran */
+    object-fit: contain; /* Zajišťuje, že obrázek bude zmenšen, ale neztratí kvalitu */
     border-radius: 10px;
 }
 
