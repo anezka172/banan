@@ -11,9 +11,8 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            height: 100vh; /* Zajistí, že stránka zabere celou výšku obrazovky */
+            height: 100vh; /* Zajištění plné výšky stránky */
             display: flex;
-            flex-direction: column;
         }
 
         header {
@@ -21,6 +20,7 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            width: 100%;
         }
 
         nav ul {
@@ -39,13 +39,43 @@
             font-size: 18px;
         }
 
+        /* Hlavní část stránky */
         main {
-            flex: 1; /* Zajistí, že hlavní obsah zabere zbývající místo */
-            padding: 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 100%;
+            height: 100%;
+            justify-content: space-between; /* Rozdělení na dvě části */
+            padding: 20px;
+        }
+
+        /* Styly pro textovou část */
+        .text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .text h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .text p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Styly pro obrázek */
+        .image {
+            flex: 1;
+            display: flex;
             justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
 
         footer {
@@ -53,27 +83,31 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: relative;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         /* Reakce na mobilní zařízení */
         @media (max-width: 600px) {
-            nav ul li {
-                display: block;
-                margin-bottom: 10px;
+            main {
+                flex-direction: column; /* Změní rozložení na vertikální pro menší obrazovky */
+                align-items: center;
             }
-        }
 
-        /* Obrázek */
-        img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            margin-top: 20px;
+            .text {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .image {
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Kontaktujte nás</h1>
         <nav>
@@ -84,13 +118,29 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <h2>Jak nás kontaktovat?</h2>
-        <p>Máte-li jakékoli dotazy, neváhejte nás kontaktovat na emailu: <strong>info@filmy.cz</strong></p>
-        <img src="https://lh5.googleusercontent.com/proxy/iYQrCCsDQMnO4jpAALILjXfPd5C6AutpaOEQf-Iz7CzyKDxhZ39Fj3BYXMMIIz7L-wQupwJNJl6dIM4hs9RUesdE7LtZfbtyqwfOZxc=s0-d" alt="Film obrázek">
+        <!-- Textová část -->
+        <div class="text">
+            <h2>Jak nás kontaktovat?</h2>
+            <p>Máte-li jakékoli dotazy, neváhejte nás kontaktovat na emailu: <strong>info@filmy.cz</strong></p>
+
+            <p>Rádi bychom se dozvěděli, jak můžeme zlepšit naše služby. Pokud máte nějaký návrh, připomínku nebo otázku týkající se našich produktů, kontaktujte nás. Naším cílem je poskytovat vám ty nejlepší filmové zážitky a služby. Pokud se chcete dozvědět více o nadcházejících filmech, novinkách v oblasti kina nebo o našich speciálních akcích, přihlaste se k odběru našeho newsletteru.</p>
+
+            <p>Chápeme, jak důležité je mít rychlý a efektivní přístup k informacím, a proto se snažíme odpovědět na všechny vaše dotazy co nejrychleji. Naši odborníci jsou k dispozici každý den od 9:00 do 18:00 a rádi vám pomohou s jakýmikoli otázkami týkajícími se našich filmů, předprodeje vstupenek nebo doporučení na základě vašich preferencí.</p>
+
+            <p>Pro více informací o našich produktech a službách nás můžete také sledovat na sociálních médiích, kde pravidelně sdílíme novinky, recenze a různé tipy na filmy. Těšíme se na vaše dotazy a připomínky!</p>
+        </div>
+
+        <!-- Obrázková část -->
+        <div class="image">
+            <img src="https://lh5.googleusercontent.com/proxy/iYQrCCsDQMnO4jpAALILjXfPd5C6AutpaOEQf-Iz7CzyKDxhZ39Fj3BYXMMIIz7L-wQupwJNJl6dIM4hs9RUesdE7LtZfbtyqwfOZxc=s0-d" alt="Film obrázek">
+        </div>
     </main>
+
     <footer>
         <p>&copy; 2025 Tvá stránka. Všechna práva vyhrazena.</p>
     </footer>
+
 </body>
 </html>
