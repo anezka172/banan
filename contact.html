@@ -13,6 +13,7 @@
             background-color: #f4f4f4;
             height: 100vh; /* Zajištění plné výšky stránky */
             display: flex;
+            flex-direction: column;
         }
 
         header {
@@ -43,9 +44,10 @@
         main {
             display: flex;
             width: 100%;
-            height: 100%;
+            height: calc(100vh - 140px); /* Zajištění, že hlavní obsah zabere celý prostor mezi header a footer */
             justify-content: space-between; /* Rozdělení na dvě části */
             padding: 20px;
+            align-items: center; /* Vertikálně centrováno */
         }
 
         /* Styly pro textovou část */
@@ -120,7 +122,7 @@
     </header>
 
     <main>
-        <!-- Textová část -->
+        <!-- Textová část vlevo -->
         <div class="text">
             <h2>Jak nás kontaktovat?</h2>
             <p>Máte-li jakékoli dotazy, neváhejte nás kontaktovat na emailu: <strong>info@filmy.cz</strong></p>
@@ -132,7 +134,7 @@
             <p>Pro více informací o našich produktech a službách nás můžete také sledovat na sociálních médiích, kde pravidelně sdílíme novinky, recenze a různé tipy na filmy. Těšíme se na vaše dotazy a připomínky!</p>
         </div>
 
-        <!-- Obrázková část -->
+        <!-- Obrázková část vpravo -->
         <div class="image">
             <img src="https://lh5.googleusercontent.com/proxy/iYQrCCsDQMnO4jpAALILjXfPd5C6AutpaOEQf-Iz7CzyKDxhZ39Fj3BYXMMIIz7L-wQupwJNJl6dIM4hs9RUesdE7LtZfbtyqwfOZxc=s0-d" alt="Film obrázek">
         </div>
