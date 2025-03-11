@@ -68,15 +68,16 @@ main {
     max-width: 50%; /* Zajišťuje, že text nebude zabírat celou šířku */
 }
 
+/* Stejné stylování pro všechny nadpisy h2 */
 h2 {
     color: #000; /* Černá barva nadpisu */
-    font-size: 2.5em;
-    margin-top: 0; /* Odstraní nadbytečné odsazení nahoře */
-    padding-top: 0; /* Odstraní odsazení nahoře */
+    font-size: 2.5em; /* Stejná velikost písma pro všechny h2 */
+    margin-top: 37.8px; /* Odsazení nadpisu o 1 cm */
     margin-bottom: 20px;
     font-weight: bold; /* Tučné písmo pro nadpis */
 }
 
+/* Stejný styl pro text v p */
 p {
     font-size: 18px;
     line-height: 1.6;
@@ -93,7 +94,7 @@ p {
 }
 
 .image img {
-    width: 80%; /* Obrázek bude menší */
+    width: 100%; /* Obrázek bude větší a zabere více místa */
     height: auto; /* Udržuje přirozený poměr stran */
     object-fit: contain; /* Zajišťuje, že obrázek bude zmenšen, ale neztratí kvalitu */
     border-radius: 10px;
@@ -121,6 +122,7 @@ footer {
     }
 
     .image img {
-        width: 80%; /* Na mobilu bude obrázek větší */
+        width: 100%; /* Na mobilu bude obrázek ještě větší */
     }
 }
+
