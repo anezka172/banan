@@ -51,8 +51,6 @@ main {
     align-items: flex-start; /* Zarovnání na začátek */
     background-color: #fff;
     padding: 20px;
-    max-width: 1200px; /* Omezení šířky hlavního obsahu */
-    margin: 0 auto; /* Centrování hlavního obsahu */
 }
 
 /* Sekce s obrázkem a textem */
@@ -98,12 +96,12 @@ p {
     padding: 20px;
     display: flex;
     justify-content: center; /* Obrázek bude uprostřed pravé strany */
-    align-items: center; /* Umožní zarovnat obrázek na střed vertikálně */
-    max-width: 100%; /* Zajistí, že obrázek nepřesáhne šířku obsahu */
+    align-items: flex-start; /* Umožní zarovnat obrázek na začátek */
+    max-width: 50%; /* Obrázek nebude přesahovat šířku textové části */
 }
 
 .image img {
-    width: 60%; /* Zmenšený obrázek na 60% šířky */
+    width: 100%; /* Obrázek zabere celou šířku svého kontejneru */
     height: auto; /* Udržuje přirozený poměr stran */
     object-fit: contain; /* Zajišťuje, že obrázek bude zmenšen, ale neztratí kvalitu */
     border-radius: 10px;
