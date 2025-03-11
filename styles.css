@@ -58,7 +58,8 @@ main {
     display: flex;
     flex-direction: row; /* Obrázek vpravo, text vlevo */
     width: 100%;
-    align-items: center;
+    align-items: flex-start; /* Obrázek bude nahoře, ale zarovnaný k začátku */
+    margin-top: 30px; /* Zajišťuje, že obsah začne pod hlavičkou */
 }
 
 /* Textová část */
@@ -72,14 +73,9 @@ main {
 h2 {
     color: #000; /* Černá barva nadpisu */
     font-size: 2em; /* Stejná velikost písma pro všechny h2 */
-    margin-top: 20px; /* Nastavíme margin-top pro všechny h2 */
+    margin-top: 30px; /* Nastavíme margin-top pro všechny h2 */
     margin-bottom: 20px;
     font-weight: bold; /* Tučné písmo pro nadpis */
-}
-
-/* Pro nadpis "O nás" přidáme margin-top (aby byl pod hlavičkou) */
-h2:first-of-type {
-    margin-top: 30px; /* Nastaví "O nás" pod hlavičku */
 }
 
 /* Styly pro text (odstavce) */
@@ -109,7 +105,7 @@ p {
 
 /* Styl pro zápatí */
 footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -129,6 +125,6 @@ footer {
     }
 
     .image img {
-        width: 80%; /* Na mobilu bude obrázek větší */
+        width: 100%; /* Na mobilu bude obrázek větší */
     }
 }
