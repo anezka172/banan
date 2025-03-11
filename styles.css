@@ -40,6 +40,7 @@ main {
     align-items: center;
     padding: 20px;
     flex-grow: 1; /* Zajišťuje, že hlavní obsah zabere veškerý dostupný prostor */
+    margin-top: 20px; /* Aby obsah nezačínal hned pod hlavičkou */
 }
 
 /* Sekce s obrázkem a textem */
