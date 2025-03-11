@@ -7,6 +7,7 @@ body {
     color: #333; /* Nastavení základní barvy textu na černou pro celý text */
 }
 
+/* Hlavička */
 header {
     background-color: #333;
     color: white;
@@ -41,12 +42,12 @@ nav ul li a:hover {
 /* Hlavní obsah */
 main {
     padding-top: 80px; /* Zajistí, že obsah nezačne pod navigací */
-    flex: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Zarovnání na začátek */
+    align-items: flex-start;
     background-color: #fff;
     padding: 20px;
+    min-height: 80vh; /* Minimální výška hlavního obsahu */
 }
 
 /* Sekce s obrázkem a textem */
@@ -61,7 +62,7 @@ main {
 .text {
     flex: 1;
     padding: 20px;
-    max-width: 50%; /* Zajišťuje, že text nebude zabírat celou šířku */
+    max-width: 50%;
 }
 
 h2 {
@@ -72,7 +73,6 @@ h2 {
 }
 
 p {
-    color: #000; /* Nastavení černé barvy pro text */
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -84,20 +84,21 @@ p {
     flex: 1;
     padding: 20px;
     display: flex;
-    justify-content: flex-start; /* Obrázek na levé straně */
+    justify-content: center; /* Středění obrázku na levé straně */
+    align-items: center; /* Vertikální středění obrázku */
+    height: 400px; /* Výška, kterou obrázek nebude překračovat */
 }
 
 .image img {
-    width: 100%; /* Obrázek bude zabírat maximální šířku, ale ne přehnaně */
-    max-width: 400px; /* Maximální šířka obrázku (aby nepřesahoval text) */
-    height: auto; /* Udržuje přirozený poměr stran */
-    object-fit: cover; /* Zajišťuje, že obrázek nebude rozmazaný a zachová kvalitní zobrazení */
-    border-radius: 10px;
+    max-width: 100%; /* Obrázek bude zabírat maximální šířku dostupného prostoru */
+    height: auto; /* Zachová přirozený poměr stran */
+    object-fit: contain; /* Obrázek nebude oříznut a zůstane ve správných proporcích */
+    border-radius: 10px; /* Volitelně zaoblení rohů obrázku */
 }
 
 /* Styl pro zápatí */
 footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 10px 0;
     text-align: center;
