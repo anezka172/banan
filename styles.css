@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333; /* Nastavení základní barvy textu na černou pro celý text */
 }
 
 header {
@@ -11,6 +12,10 @@ header {
     color: white;
     padding: 20px 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 nav ul {
@@ -29,70 +34,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-main {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Reakce na mobilní zařízení */
-@media (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-}
-/* Základní styl pro celé tělo */
-/* Základní styl pro celé tělo */
-/* Základní styl pro celé tělo */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-/* Styl pro hlavičku a navigaci */
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-header nav ul li a:hover {
+nav ul li a:hover {
     color: #000000;
 }
 
@@ -120,6 +62,7 @@ main {
     flex: 1;
     padding: 20px;
     max-width: 50%; /* Zajišťuje, že text nebude zabírat celou šířku */
+    margin-top: 80px; /* Přidání místa mezi hlavičkou a textem */
 }
 
 h2 {
@@ -130,6 +73,7 @@ h2 {
 }
 
 p {
+    color: #000; /* Nastavení černé barvy textu pro odstavce */
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
