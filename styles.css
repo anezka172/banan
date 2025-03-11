@@ -4,7 +4,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333; /* Nastavení základní barvy textu na černou pro celý text */
+    color: #333; /* Základní barva textu */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Zajistí, že stránka bude mít minimální výšku */
 }
 
 /* Hlavička */
@@ -41,21 +44,20 @@ nav ul li a:hover {
 
 /* Hlavní obsah */
 main {
-    padding-top: 80px; /* Zajistí, že obsah nezačne pod navigací */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: #fff;
+    padding-top: 80px; /* Zajistí, že obsah nezačne pod navigací */
     padding: 20px;
-    min-height: 80vh; /* Minimální výška hlavního obsahu */
+    background-color: #fff;
 }
 
 /* Sekce s obrázkem a textem */
 .content {
     display: flex;
-    flex-direction: row; /* Obrázek vlevo, text vpravo */
     width: 100%;
-    align-items: center;
+    justify-content: space-between;
 }
 
 /* Textová část */
@@ -66,10 +68,10 @@ main {
 }
 
 h2 {
-    color: #000; /* Černá barva nadpisu */
+    color: #000;
     font-size: 2.5em;
     margin-bottom: 20px;
-    font-weight: bold; /* Tučné písmo pro nadpis */
+    font-weight: bold;
 }
 
 p {
@@ -84,16 +86,16 @@ p {
     flex: 1;
     padding: 20px;
     display: flex;
-    justify-content: center; /* Středění obrázku na levé straně */
-    align-items: center; /* Vertikální středění obrázku */
-    height: 400px; /* Výška, kterou obrázek nebude překračovat */
+    justify-content: center; /* Horizontálně vycentrovaný obrázek */
+    align-items: center; /* Vertikálně vycentrovaný obrázek */
+    height: 400px; /* Určena výška pro obrázek */
 }
 
 .image img {
-    max-width: 100%; /* Obrázek bude zabírat maximální šířku dostupného prostoru */
+    max-width: 100%; /* Obrázek zabírá maximální šířku dostupného prostoru */
     height: auto; /* Zachová přirozený poměr stran */
-    object-fit: contain; /* Obrázek nebude oříznut a zůstane ve správných proporcích */
-    border-radius: 10px; /* Volitelně zaoblení rohů obrázku */
+    object-fit: contain; /* Zachová kvalitu obrázku bez oříznutí */
+    border-radius: 10px;
 }
 
 /* Styl pro zápatí */
@@ -102,7 +104,7 @@ footer {
     color: white;
     padding: 10px 0;
     text-align: center;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -110,7 +112,7 @@ footer {
 /* Reakce na mobilní zařízení */
 @media (max-width: 768px) {
     .content {
-        flex-direction: column; /* Na menších zařízeních se obsah bude zobrazovat vertikálně */
+        flex-direction: column; /* Na menších zařízeních se obsah zobrazuje vertikálně */
     }
 
     .text {
@@ -118,6 +120,6 @@ footer {
     }
 
     .image img {
-        width: 80%; /* Na mobilu bude obrázek větší */
+        width: 80%;
     }
 }
