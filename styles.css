@@ -71,10 +71,15 @@ main {
 /* Styly pro nadpisy h2 (O nás, Jak nás kontaktovat) */
 h2 {
     color: #000; /* Černá barva nadpisu */
-    font-size: 2.5em; /* Stejná velikost písma pro všechny h2 */
-    margin-top: 0; /* Bez odsazení pro všechny h2 */
+    font-size: 2em; /* Stejná velikost písma pro všechny h2 */
+    margin-top: 20px; /* Nastavíme margin-top pro všechny h2 */
     margin-bottom: 20px;
     font-weight: bold; /* Tučné písmo pro nadpis */
+}
+
+/* Pro nadpis "O nás" přidáme margin-top (aby byl pod hlavičkou) */
+h2:first-of-type {
+    margin-top: 30px; /* Nastaví "O nás" pod hlavičku */
 }
 
 /* Styly pro text (odstavce) */
@@ -90,11 +95,12 @@ p {
     flex: 1;
     padding: 20px;
     display: flex;
-    justify-content: flex-start; /* Obrázek na pravé straně */
+    justify-content: center; /* Obrázek bude uprostřed pravé strany */
+    align-items: center; /* Umožní zarovnat obrázek na střed vertikálně */
 }
 
 .image img {
-    width: 100%; /* Obrázek bude větší a zabere více místa */
+    width: 60%; /* Zmenšený obrázek na 60% šířky */
     height: auto; /* Udržuje přirozený poměr stran */
     object-fit: contain; /* Zajišťuje, že obrázek bude zmenšen, ale neztratí kvalitu */
     border-radius: 10px;
@@ -122,6 +128,6 @@ footer {
     }
 
     .image img {
-        width: 100%; /* Na mobilu bude obrázek ještě větší */
+        width: 80%; /* Na mobilu bude obrázek větší */
     }
 }
