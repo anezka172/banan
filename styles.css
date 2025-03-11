@@ -40,7 +40,7 @@ nav ul li a:hover {
 
 /* Hlavní obsah */
 main {
-    padding-top: 70px; /* Zajistí, že obsah nezačne pod navigací */
+    padding-top: 80px; /* Zajistí, že obsah nezačne pod navigací */
     flex: 1;
     display: flex;
     justify-content: center;
@@ -52,7 +52,7 @@ main {
 /* Sekce s obrázkem a textem */
 .content {
     display: flex;
-    flex-direction: row; /* Obrázek vpravo, text vlevo */
+    flex-direction: row; /* Obrázek vlevo, text vpravo */
     width: 100%;
     align-items: center;
 }
@@ -62,7 +62,6 @@ main {
     flex: 1;
     padding: 20px;
     max-width: 50%; /* Zajišťuje, že text nebude zabírat celou šířku */
-    margin-top: 80px; /* Přidání místa mezi hlavičkou a textem */
 }
 
 h2 {
@@ -73,7 +72,7 @@ h2 {
 }
 
 p {
-    color: #000; /* Nastavení černé barvy textu pro odstavce */
+    color: #000; /* Nastavení černé barvy pro text */
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -85,13 +84,14 @@ p {
     flex: 1;
     padding: 20px;
     display: flex;
-    justify-content: flex-start; /* Obrázek na pravé straně */
+    justify-content: flex-start; /* Obrázek na levé straně */
 }
 
 .image img {
-    width: 80%; /* Obrázek bude menší */
+    width: 100%; /* Obrázek bude zabírat maximální šířku, ale ne přehnaně */
+    max-width: 400px; /* Maximální šířka obrázku (aby nepřesahoval text) */
     height: auto; /* Udržuje přirozený poměr stran */
-    object-fit: contain; /* Zajišťuje, že obrázek bude zmenšen, ale neztratí kvalitu */
+    object-fit: cover; /* Zajišťuje, že obrázek nebude rozmazaný a zachová kvalitní zobrazení */
     border-radius: 10px;
 }
 
