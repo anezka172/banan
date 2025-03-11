@@ -72,7 +72,7 @@ main {
 h2 {
     color: #000; /* Černá barva nadpisu */
     font-size: 2.5em; /* Stejná velikost písma pro všechny h2 */
-    margin-top: 37.8px; /* Odsazení nadpisu o 1 cm */
+    margin-top: 0; /* Bez odsazení pro všechny h2 */
     margin-bottom: 20px;
     font-weight: bold; /* Tučné písmo pro nadpis */
 }
