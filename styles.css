@@ -4,11 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    height: 100%; /* Aby obsah zabíral plnou výšku */
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Ujistíme se, že stránka zabírá celou výšku */
 }
 
+/* Hlavička */
 header {
     background-color: #333;
     color: white;
@@ -33,36 +34,32 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Hlavní část stránky */
+/* Hlavní část */
 main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px;
-    flex-grow: 1; /* Zajišťuje, že hlavní obsah zabere veškerý dostupný prostor */
-    margin-top: 20px; /* Aby obsah nezačínal hned pod hlavičkou */
+    flex-grow: 1; /* Zajišťuje, že hlavní obsah zabere veškerý prostor */
 }
 
 /* Sekce s obrázkem a textem */
 .content {
     display: flex;
-    flex-direction: row; /* Obrázek vpravo, text vlevo */
-    width: 100%;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 20px; /* Mírné odsazení pro oddělení od hlavičky */
 }
 
 /* Textová část */
 .text {
     flex: 1;
     padding: 20px;
-    max-width: 50%; /* Zajišťuje, že text nebude zabírat celou šířku */
+    max-width: 50%; /* Omezíme šířku textu */
 }
 
 h2 {
-    color: #000; /* Černá barva nadpisu */
+    color: #000;
     font-size: 2.5em;
     margin-bottom: 20px;
-    font-weight: bold; /* Tučné písmo pro nadpis */
+    font-weight: bold;
 }
 
 p {
@@ -75,22 +72,20 @@ p {
 /* Obrázková část */
 .image {
     flex: 1;
-    padding: 20px;
     display: flex;
-    justify-content: flex-start; /* Obrázek na pravé straně */
-    align-items: center;
+    justify-content: center; /* Obrázek bude vystředěn na pravé straně */
 }
 
 .image img {
-    width: 80%; /* Obrázek bude menší */
-    height: auto; /* Udržuje přirozený poměr stran */
-    object-fit: contain; /* Zajišťuje, že obrázek bude zmenšen, ale neztratí kvalitu */
+    max-width: 100%; /* Obrázek bude mít maximální šířku 100% svého rodiče */
+    height: auto; /* Udržuje přirozený poměr stran obrázku */
+    max-height: 300px; /* Omezíme výšku obrázku, aby nebyl příliš vysoký */
     border-radius: 10px;
 }
 
 /* Styl pro zápatí */
 footer {
-    background-color: #000000;
+    background-color: #333;
     color: white;
     padding: 10px 0;
     text-align: center;
