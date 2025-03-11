@@ -68,7 +68,7 @@ main {
     max-width: 50%; /* Zajišťuje, že text nebude zabírat celou šířku */
 }
 
-/* Stejné stylování pro všechny nadpisy h2 */
+/* Styly pro nadpisy h2 (O nás, Jak nás kontaktovat) */
 h2 {
     color: #000; /* Černá barva nadpisu */
     font-size: 2.5em; /* Stejná velikost písma pro všechny h2 */
@@ -77,7 +77,7 @@ h2 {
     font-weight: bold; /* Tučné písmo pro nadpis */
 }
 
-/* Stejný styl pro text v p */
+/* Styly pro text (odstavce) */
 p {
     font-size: 18px;
     line-height: 1.6;
@@ -125,4 +125,3 @@ footer {
         width: 100%; /* Na mobilu bude obrázek ještě větší */
     }
 }
-
