@@ -1,65 +1,80 @@
-/* Základní stylování pro celé stránky */
+/* Základní styl pro celé tělo */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ujistíme se, že stránka zabírá celou výšku */
+    height: 100vh;
 }
 
-/* Hlavička */
+/* Styl pro hlavičku a navigaci */
 header {
     background-color: #333;
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 100;
 }
 
-nav ul {
+header nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
     margin-right: 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-/* Hlavní část */
+header nav ul li a:hover {
+    color: #000000;
+}
+
+/* Hlavní obsah */
 main {
+    padding-top: 70px; /* Zajistí, že obsah nezačne pod navigací */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Zarovnání na začátek */
+    background-color: #fff;
     padding: 20px;
-    flex-grow: 1; /* Zajišťuje, že hlavní obsah zabere veškerý prostor */
 }
 
 /* Sekce s obrázkem a textem */
 .content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row; /* Obrázek vpravo, text vlevo */
+    width: 100%;
     align-items: center;
-    margin-top: 20px; /* Mírné odsazení pro oddělení od hlavičky */
 }
 
 /* Textová část */
 .text {
     flex: 1;
     padding: 20px;
-    max-width: 50%; /* Omezíme šířku textu */
+    max-width: 50%; /* Zajišťuje, že text nebude zabírat celou šířku */
 }
 
 h2 {
-    color: #000;
+    color: #000; /* Černá barva nadpisu */
     font-size: 2.5em;
+    margin-top: 0; /* Odstraní nadbytečné odsazení nahoře */
+    padding-top: 0; /* Odstraní odsazení nahoře */
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: bold; /* Tučné písmo pro nadpis */
 }
 
 p {
@@ -72,14 +87,15 @@ p {
 /* Obrázková část */
 .image {
     flex: 1;
+    padding: 20px;
     display: flex;
-    justify-content: center; /* Obrázek bude vystředěn na pravé straně */
+    justify-content: flex-start; /* Obrázek na pravé straně */
 }
 
 .image img {
-    max-width: 100%; /* Obrázek bude mít maximální šířku 100% svého rodiče */
-    height: auto; /* Udržuje přirozený poměr stran obrázku */
-    max-height: 300px; /* Omezíme výšku obrázku, aby nebyl příliš vysoký */
+    width: 80%; /* Obrázek bude menší */
+    height: auto; /* Udržuje přirozený poměr stran */
+    object-fit: contain; /* Zajišťuje, že obrázek bude zmenšen, ale neztratí kvalitu */
     border-radius: 10px;
 }
 
